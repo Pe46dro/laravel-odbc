@@ -8,6 +8,7 @@
 
 namespace Abram\Odbc;
 
+use Illuminate\Support\Arr;
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
 
@@ -27,7 +28,7 @@ class ODBCConnector extends Connector implements ConnectorInterface
     {
         $options = $this->getOptions($config);
 
-        $dsn = array_get($config, 'dsn');
+        $dsn = Arr::get($config, 'dsn');
 
         $connection = $this->createConnection($dsn, $config, $options);
 
