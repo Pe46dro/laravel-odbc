@@ -1,5 +1,5 @@
 {
-	"name": "abram/laravel-odbc",
+	"name": "ejaboneta/laravel-odbc",
 	"description": "ODBC integration for Laravel framework ",
 	"type": "library",
 	"homepage": "https://github.com/andreossido/laravel-odbc",
@@ -8,6 +8,12 @@
 			"name": "Andrea Abram",
 			"email": "andreossido@gmail.com",
 			"homepage": "https://github.com/andreossido",
+			"role": "Developer"
+		},
+		{
+			"name": "Ernesto Jaboneta",
+			"email": "ernestojaboneta@gmail.com",
+			"homepage": "https://github.com/ejaboneta",
 			"role": "Developer"
 		}
 	],
