@@ -1,10 +1,9 @@
 {
-	"name": "ejaboneta/laravel-odbc",
+	"name": "pe46dro/laravel-odbc",
 	"description": "ODBC integration for Laravel framework ",
 	"type": "library",
-	"homepage": "https://github.com/andreossido/laravel-odbc",
-	"authors": [
-		{
+	"homepage": "https://github.com/pe46dro/laravel-odbc",
+	"authors": [{
 			"name": "Andrea Abram",
 			"email": "andreossido@gmail.com",
 			"homepage": "https://github.com/andreossido",
@@ -14,6 +13,12 @@
 			"name": "Ernesto Jaboneta",
 			"email": "ernestojaboneta@gmail.com",
 			"homepage": "https://github.com/ejaboneta",
+			"role": "Developer"
+		},
+		{
+			"name": "Pietro Marangon",
+			"email": "pietro.marangon@gmail.com",
+			"homepage": "https://github.com/pe46dro",
 			"role": "Developer"
 		}
 	],

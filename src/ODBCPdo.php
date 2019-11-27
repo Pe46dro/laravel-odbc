@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Andrea
@@ -17,7 +18,7 @@ class ODBCPdo extends PDO
 
     public function __construct($dsn, $username, $passwd, $options = [])
     {
-        $this->setConnection(odbc_connect($dsn, $username, $passwd));
+        $this->setConnection(new PDO($dsn, $username, $passwd));
     }
 
     public function exec($query)
@@ -58,18 +59,18 @@ class ODBCPdo extends PDO
 
     public function commit()
     {
-        return odbc_commit($this->getConnection());
+        return $this->connection->commit();
     }
 
     public function rollBack()
     {
-        $rollback = odbc_rollback($this->getConnection());
-        odbc_autocommit($this->getConnection(), true);
+        $rollback = $this->connection->rollback();
+        $this->connection->setAttribute(PDO::ATTR_AUTOCOMMIT, TRUE);
         return $rollback;
     }
 
     public function beginTransaction()
     {
-        odbc_autocommit($this->getConnection(), false);
+        $this->connection->setAttribute(PDO::ATTR_AUTOCOMMIT, FALSE);
     }
 }
