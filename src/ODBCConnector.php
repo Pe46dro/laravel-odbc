@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Andrea
@@ -46,6 +47,6 @@ class ODBCConnector extends Connector implements ConnectorInterface
      */
     protected function createPdoConnection($dsn, $username, $password, $options)
     {
-        return new ODBCPdo($dsn, $username, $password);
+        return new PDO($dsn, $username, $password, $options);
     }
 }
