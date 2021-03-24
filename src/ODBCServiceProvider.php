@@ -20,6 +20,7 @@ class ODBCServiceProvider extends ServiceProvider
             $db->extend('odbc', function ($config, $name) {
                 $pdoConnection = (new ODBCConnector())->connect($config);
                 $connection = new ODBCConnection($pdoConnection, $config['database'], isset($config['prefix']) ? $config['prefix'] : '', $config);
+
                 return $connection;
             });
         });
