@@ -4,26 +4,25 @@
  * Created by PhpStorm.
  * User: Andrea
  * Date: 20/02/2018
- * Time: 15:50
+ * Time: 15:50.
  */
 
 namespace Abram\Odbc;
 
-use Illuminate\Support\Arr;
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
+use Illuminate\Support\Arr;
 
 class ODBCConnector extends Connector implements ConnectorInterface
 {
-
     /**
      * Establish a database connection.
      *
      * @param array $config
      *
      * @return \PDO
-     * @internal param array $options
      *
+     * @internal param array $options
      */
     public function connect(array $config)
     {
@@ -39,10 +38,11 @@ class ODBCConnector extends Connector implements ConnectorInterface
     /**
      * Create a new PDO connection instance.
      *
-     * @param  string $dsn
-     * @param  string $username
-     * @param  string $password
-     * @param  array $options
+     * @param string $dsn
+     * @param string $username
+     * @param string $password
+     * @param array  $options
+     *
      * @return ODBCPdo
      */
     protected function createPdoConnection($dsn, $username, $password, $options)
